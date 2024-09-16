@@ -1,7 +1,9 @@
 * {
     margin: 0;
     padding: 0;
+    font-family: "Montserrat", sans-serif;
 }
+
 header {
     background-color: black;
     display: flex;
@@ -25,6 +27,10 @@ header div {
     display: flex;
     align-items: center;
     list-style: none;
+
+}
+.menu li:hover{
+    color: #1ed760;
 
 }
 
@@ -65,6 +71,10 @@ header div {
     color: white;
     padding: 15px 35px;
     border-radius: 100px;
+}
+#btn-comece-agora:hover{
+    padding: 20px 40px;
+
 }
 #btn-ver-planos{
     background-color: rgb(29, 117, 222);
@@ -126,6 +136,8 @@ header div {
 .section-plan{
     display: flex;
     height: 700px;
+    max-width: 900px;
+    margin: auto;
 }
 .plan-style{
     background-color: white;
@@ -185,4 +197,36 @@ header div {
 .condiions , .condiions a{
     color: rgb(83,83,83);
     font-size: 10px;
+}
+footer{
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    padding: 70px 10%;
+}
+footer div ul{
+    color: #919496;
+    list-style-type: none;
+
+}
+footer a{
+    color: white;
+    text-decoration: none;
+}
+footer li:nth-child(1){
+    padding-bottom: 20px;
+}
+footer li {
+    padding: 10px 20px;
+    font-size: 12px;
+
+}
+footer img{
+    width: 150px;
+    padding-right:20px;
+}
+footer i{
+    color: white;
+    font-size: 20px;
+    padding: 0 10px;
 }
