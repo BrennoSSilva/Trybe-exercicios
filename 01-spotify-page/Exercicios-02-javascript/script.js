@@ -1,23 +1,46 @@
-let diaper ;
-let babySize = 15;
+const round = 2; //Entre 1 e 16
+let money = 1200;
+const killWeapon = 'Knife'; //'Knife', 'AWP', 'Desert Eagle', 'Molotov', 'MP7'. 
+const win = true; //false
+const howWin = 'Bomb explode'; //'Eliminando', 'Tempo esgotado', 'Bomb has been planted', 'Bomb has been defused', 'Bomb explode'.
+const defuseBomb = true; //false
+const bombDetonate = false; //true
 
-if (typeof babySize !== 'number'){
-    diaper = 'Valor inválido';
-} else if (babySize <= 4) {
-    diaper = 'RN';
-} else if (babySize > 4 && babySize <= 6){
-    diaper = 'RN';
-} else if (babySize > 6 && babySize <= 8){
-    diaper = 'p';
-} else if (babySize > 8 && babySize <= 10){
-    diaper = 'm';
-} else if (babySize > 10 && babySize <= 13){
-    diaper = 'G';
-} else if (babySize > 13 && babySize <= 15){
-    diaper = 'XG';
-} else if (babySize > 15){
-    diaper = 'XXG';
+if (round === 1 || round === 16) {
+  money = 800;
+} else if (win === true && (howWin === 'Eliminando' || howWin === 'Tempo esgotado')) {
+  money += 3250;
+} else if (win === true && howWin === 'Bomb has been planted') {
+  money += 3550;
+} else if (win === true && (howWin === 'Bomb has been defused' || howWin === 'Bomb explode')) {
+  money += 3500;
 }
 
+if (round !== 1 && round !== 16) {
+  switch (killWeapon) {
+    case 'Knife':
+      money += 1500;
+      break;
+    case 'AWP':
+      money += 100;
+      break;
+    case 'Desert Eagle':
+      money += 300;
+      break;
+    case 'Molotov':
+      money += 300;
+      break;
+    case 'MP7':
+      money += 600;
+      break;
+    default:
+      console.log('Arma não encontrada.');
+      break;
+  }
+}
 
-console.log ('O tamanho da fralda é ' + diaper);
+if (money > 16000) {
+  money = 16000;
+}
+
+console.log('Money: $' + money);
