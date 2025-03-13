@@ -1,13 +1,23 @@
-let nun1 = 100;
-let nun2 = 100;
-let word = 'Palavra';
-let xablau = null;
-let babalu =undefined;
+let diaper ;
+let babySize = 15;
 
-if (nun1 > nun2){
-    console.log('nun1 é maior');
-} else if (nun1 == nun2) {
-    console.log('Igual');
-} else {
-    console.log('nun2 é maior');
-};
+if (typeof babySize !== 'number'){
+    diaper = 'Valor inválido';
+} else if (babySize <= 4) {
+    diaper = 'RN';
+} else if (babySize > 4 && babySize <= 6){
+    diaper = 'RN';
+} else if (babySize > 6 && babySize <= 8){
+    diaper = 'p';
+} else if (babySize > 8 && babySize <= 10){
+    diaper = 'm';
+} else if (babySize > 10 && babySize <= 13){
+    diaper = 'G';
+} else if (babySize > 13 && babySize <= 15){
+    diaper = 'XG';
+} else if (babySize > 15){
+    diaper = 'XXG';
+}
+
+
+console.log ('O tamanho da fralda é ' + diaper);
