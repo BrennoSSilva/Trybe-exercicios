@@ -1,0 +1,91 @@
+main {
+    display: flex;
+    width: 511px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    margin-left: 5%;
+}
+
+.envie-seu-pedido {
+    color: var(--orange-8, #E8590C);
+    font-family: Inter;
+    font-size: 34px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 130%;
+}
+
+.div-identificacao {
+    display: flex;
+    width: 511px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 32px;
+}
+
+.div-lo-identificacao {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+.div-lo-identificacao h4 {
+    color: var(--other-black, #000);
+    font-family: Inter;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 145%;
+}
+
+.imputs-identificacao {
+    display: flex;
+    width: 511px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+}
+
+.imput-mane,
+.imput-email {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 5px;
+
+}
+
+.imputs-identificacao label {
+    align-self: stretch;
+    color: var(--gray-9, #212529);
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+}
+
+.imputs-identificacao input[type="text"] {
+    flex: 1 0 0;
+    color: var(--other-black, #000);
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 40px;
+    border-radius: 8px;
+    border: 1px solid var(--gray-4, #CED4DA);
+
+}
+
+.imputs-identificacao input[type="email"] {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 5px;
+    flex: 1 0 0;
+}
